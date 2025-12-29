@@ -14,8 +14,23 @@ buildscript {
   }
 }
 
+import java.nio.file.Paths
+
 def isNewArchitectureEnabled() {
   return rootProject.hasProperty("newArchEnabled") && rootProject.getProperty("newArchEnabled") == "true"
+}
+
+def findNodeModulePath(baseDir, packageName) {
+  def basePath = baseDir.toPath().normalize()
+  def currentDir = basePath
+  while (currentDir) {
+    def candidatePath = Paths.get(currentDir.toString(), "node_modules", packageName)
+    if (candidatePath.toFile().exists()) {
+      return candidatePath.toString()
+    }
+    currentDir = currentDir.getParent()
+  }
+  return null
 }
 
 apply plugin: "com.android.library"

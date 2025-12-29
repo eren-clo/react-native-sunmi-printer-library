@@ -1,4 +1,6 @@
-import { NativeModules, Platform } from 'react-native'
+import { Platform } from 'react-native'
+import NativeSunmiPrinterLibrary from './NativeSunmiPrinterLibrary'
+import NativeSunmiScannerLibrary from './NativeSunmiScannerLibrary'
 
 /**
  * see: SUNMI Developers <https://developer.sunmi.com/en-US/>
@@ -85,10 +87,8 @@ interface SunmiScannerLibrary {
   scan: () => Promise<string>
 }
 
-const sunmiPrinterLibrary: SunmiPrinterLibrary =
-  NativeModules.SunmiPrinterLibrary
-const sunmiScannerLibrary: SunmiScannerLibrary =
-  NativeModules.SunmiScannerLibrary
+const sunmiPrinterLibrary: SunmiPrinterLibrary = NativeSunmiPrinterLibrary
+const sunmiScannerLibrary: SunmiScannerLibrary = NativeSunmiScannerLibrary
 
 const OS_DOES_NOT_SUPPORT = 'Your OS does not support'
 

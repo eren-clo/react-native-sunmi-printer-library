@@ -9,12 +9,14 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
 
 /**
  * @see
  * https://developer.sunmi.com/docs/en-US/xeghjk491/ciceghjk502
  */
+@ReactModule(name = SunmiScannerLibraryModule.NAME)
 class SunmiScannerLibraryModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
 
@@ -89,3 +91,5 @@ class SunmiScannerLibraryModule(reactContext: ReactApplicationContext) :
   }
 
 }
+
+
