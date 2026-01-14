@@ -10,10 +10,10 @@
   "exports": {
     ".": {
       "types": "./lib/typescript/src/index.d.ts",
-      "import": "./lib/module/index.js",
-      "require": "./lib/commonjs/index.js",
+      "import": "./lib/module/index",
+      "require": "./lib/commonjs/index",
       "react-native": "./src/index.ts",
-      "default": "./lib/commonjs/index.js"
+      "default": "./lib/commonjs/index"
     }
   },
   "files": [
