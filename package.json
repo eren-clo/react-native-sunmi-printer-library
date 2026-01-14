@@ -1,6 +1,6 @@
 {
   "name": "@mitsuharu/react-native-sunmi-printer-library",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "React Native module that support SUNMI mobile printer devices.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -10,10 +10,10 @@
   "exports": {
     ".": {
       "types": "./lib/typescript/src/index.d.ts",
-      "import": "./lib/module/index",
-      "require": "./lib/commonjs/index",
+      "import": "./lib/module/index.js",
+      "require": "./lib/commonjs/index.js",
       "react-native": "./src/index.ts",
-      "default": "./lib/commonjs/index"
+      "default": "./lib/commonjs/index.js"
     }
   },
   "files": [
